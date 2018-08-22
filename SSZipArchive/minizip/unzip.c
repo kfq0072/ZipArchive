@@ -1249,6 +1249,11 @@ extern int ZEXPORT unzOpenCurrentFilePassword(unzFile file, const char *password
     return unzOpenCurrentFile3(file, NULL, NULL, 0, password);
 }
 
+extern int ZEXPORT unzOpenCurrentFilePassword_midea(unzFile file, const char *password)
+{
+    return unzOpenCurrentFile3(file, NULL, NULL, 0, password);
+}
+
 extern int ZEXPORT unzOpenCurrentFile2(unzFile file, int *method, int *level, int raw)
 {
     return unzOpenCurrentFile3(file, method, level, raw, NULL);

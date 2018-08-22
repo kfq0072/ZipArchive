@@ -81,7 +81,7 @@ NSString *const SSZipArchiveErrorDomain = @"SSZipArchiveErrorDomain";
             if ([pw length] == 0) {
                 ret = unzOpenCurrentFile(zip);
             } else {
-                ret = unzOpenCurrentFilePassword(zip, [pw cStringUsingEncoding:NSASCIIStringEncoding]);
+                ret = unzOpenCurrentFilePassword_midea(zip, [pw cStringUsingEncoding:NSASCIIStringEncoding]);
             }
             if (ret != UNZ_OK) {
                 if (ret != UNZ_BADPASSWORD) {
@@ -252,7 +252,7 @@ NSString *const SSZipArchiveErrorDomain = @"SSZipArchiveErrorDomain";
             if ([password length] == 0) {
                 ret = unzOpenCurrentFile(zip);
             } else {
-                ret = unzOpenCurrentFilePassword(zip, [password cStringUsingEncoding:NSASCIIStringEncoding]);
+                ret = unzOpenCurrentFilePassword_midea(zip, [password cStringUsingEncoding:NSASCIIStringEncoding]);
             }
             
             if (ret != UNZ_OK) {

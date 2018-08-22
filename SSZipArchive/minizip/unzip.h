@@ -108,6 +108,8 @@ extern int ZEXPORT unzOpenCurrentFile OF((unzFile file));
 
    return UNZ_OK if no error */
 
+extern int ZEXPORT unzOpenCurrentFilePassword_midea OF((unzFile file, const char* password));
+
 extern int ZEXPORT unzOpenCurrentFilePassword OF((unzFile file, const char* password));
 /* Open for reading data the current file in the zipfile.
    password is a crypting password
